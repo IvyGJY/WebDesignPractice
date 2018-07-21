@@ -1,0 +1,10 @@
+#unselected{
+    width: 100px;
+}
+#selected{
+    width: 100px;
+}
+.sel{
+    display: inline-block;
+    width: 50px;
+}

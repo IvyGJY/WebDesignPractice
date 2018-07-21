@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>左列选择到右列</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="selection.css" />
+    
+</head>
+<body>
+    <select id="unselected" size="5" multiple>
+        <option>Argentina</option>
+        <option>Brazil</option>
+        <option>China</option>
+        <option>London</option>
+    </select>
+
+    <div class="sel">
+        <button onclick="move(this)">&gt;&gt;</button>
+        <button onclick="move(this)">&gt;</button>
+        <button onclick="move(this)">&lt;</button>
+        <button onclick="move(this)">&lt;&lt;</button>
+    </div>
+    
+    <select id="selected" size="5" multiple>
+    </select>
+</body>
+<script type="text/javascript" src="selection.js"></script>
+</html>
