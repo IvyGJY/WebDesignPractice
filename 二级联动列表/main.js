@@ -26,14 +26,22 @@ function findSelect(index){
     // 先将之前的内容清空
     city.innerHTML = " ";
 
+    if(index == 0){
+        city.setAttribute("class","hide");
+    }
+    else{
+        city.setAttribute("class"," ");
+
     // 相当于建了一个盘子 可以一次性添加元素而不是每次添加一次
     var plate = document.createDocumentFragment();
 
     for(var i = 0; i<cities[index].length;i++){
         var option = document.createElement("option");
         option.innerHTML = cities[index][i].name;
+        option.value = cities[index][i].value;
         plate.appendChild(option);
     }
 
     city.appendChild(plate);
+}
 }
