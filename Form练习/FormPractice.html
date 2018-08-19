@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>表单练习</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+<body>
+    <h3>新增员工</h3>
+    <form>
+        <table>
+            <tr>
+                <td>姓名：</td>
+                <td>
+                    <input type="text" name="userName">
+                </td>
+                <td>*</td>
+                <td>
+                    <div class="validationInfo">
+                        请输入10位以内的字母、数字或下划线
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                    <td>密码：</td>
+                    <td>
+                        <input type="password" name="userPassword">
+                    </td>
+                    <td>*</td>
+                    <td>
+                        <div class="validationInfo">
+                            请输入6位数字
+                        </div>
+                    </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="提交"></td>
+                <td><input type="reset" value="重置"></td>              
+            </tr>
+        </table>
+    </form>
+</body>
+<script src="main.js"></script>
+</html>

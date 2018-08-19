@@ -1,0 +1,31 @@
+.validationInfo{
+    display: none;
+}
+
+.textFocus{
+    border-left: black 1px solid;
+    border-top: black 1px solid;
+}
+
+.validationSuccess{
+    background-image: url(../Form练习/images/yes.png);
+    background-size:contain;    
+    /* contain：保持图像的宽高比例，将图片缩放到宽或者高正好适应定义背景的区域，但背景仍在定义的区域之内，被包含。 */
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    width: 0px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.validationFailure{
+    background-image: url(../Form练习/images/warning.png);
+    background-size:contain; 
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    height: 20px;
+    border: 0.7px red solid;
+    overflow: hidden;
+}
