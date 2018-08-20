@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>链接打开方式</title>
+    <meta name="description" content="分别通过 html 和 js 两种方法，实现4种不同的链接打开方式">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <style>
+        table,th,td,tr{
+            margin-top: 20px;
+            border-collapse:collapse;  /*合并框线*/
+            border:solid #999; 
+        }
+    </style>   
+</head>
+<body>
+    <a href="http://Joy-G.cn" target="_self">html-当前窗口打开，可后退</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="javascript:fun1()">js-当前窗口打开，可后退</a><br>
+    <!-- 当前窗口打开，不可后退 该方法无法通过html实现 -->
+    
+    <a href="javascript:fun2()">js-当前窗口打开，不可后退</a><br>
+    <a href="http://Joy-G.cn" target="_blank">html-新窗口打开，可打开多个</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="javascript:fun3()">js-新前窗口打开，可打开多个</a><br>
+    <a href="http://Joy-G.cn" target="myPage">html-新前窗口打开，只可打开一个</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="javascript:fun4()">js-新前窗口打开，只可打开一个</a><br>
+
+    <!-- <br><br> -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>属性名</th>
+                <th>功能描述</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>_blank</td>
+                <td>在新窗口打开</td>
+            </tr>
+            <tr>
+                <td>_self</td>
+                <td>在当前窗口的同一框架下打开（默认属性）</td>
+            </tr>
+            <tr>
+                <td>_parent</td>
+                <td>在当前框架的父框架下打开</td>
+            </tr>
+            <tr>
+                <td>_top</td>
+                <td>在整个浏览器窗口中打开，无视框架</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+<script>
+    function fun1(){
+        open("http://Joy-G.cn", "_self");
+    }
+    function fun2(){
+        // location 只能在当前窗口打开，replace 方法会将该地址覆盖掉history栈中的原地址，导致不能实现后退
+        location.replace("http://Joy-G.cn");
+    }
+    function fun3(){
+        open("http://Joy-G.cn", "_blank");
+    }
+    function fun4(){
+        // 这里是的 “myPage” 相当于在内存中为这个窗口重新起了一个名字，由于内存中的名字不能重复，所以可以实现每次点击只打开一个窗口
+        open("http://Joy-G.cn", "myPage");
+    }
+</script>
+</html>
