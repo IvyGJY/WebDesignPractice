@@ -1,0 +1,57 @@
+#clock{
+    border-radius: 50%;
+    border: 2px black solid;
+    width: 200px;
+    height: 200px;
+}
+
+#h{
+    height: 50px;
+    width: 5px;
+    background-color: dimgray;
+    transform-origin: 20% 40px;
+    position:absolute; 
+    top:60px; 
+    left:105px;
+}
+#m{
+    height: 70px;
+    width: 5px;
+    background-color: black;
+    transform-origin: 20% 60px;
+    position:absolute; 
+    top:40px; 
+    left:105px;
+}
+#s{
+    height:65px;
+    width: 3px;
+    background-color: red;
+    transform-origin: 20% 55px;
+    position:absolute; 
+    top:45px; 
+    left:105px;
+}
+
+div[id^="a"]{
+    position:absolute;
+    font-size:1.3em; 
+    text-align:center;
+    width:7px; 
+    height:5px;
+    top:10px; 
+    left: 105px;
+	transform-origin:50% 100px;
+}
+
+#a1{transform:rotate(30deg)}
+#a2{transform:rotate(60deg)}
+#a3{transform:rotate(90deg)}
+#a4{transform:rotate(120deg)}
+#a5{transform:rotate(150deg)}
+#a6{transform:rotate(180deg)}
+#a7{transform:rotate(210deg)}
+#a8{transform:rotate(240deg)}
+#a9{transform:rotate(270deg)}
+#a10{transform:rotate(300deg)}
+#a11{transform:rotate(330deg)}
