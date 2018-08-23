@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>倒计时自动关闭并跳转页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    
+</head>
+<body>
+    <span>5秒后自动关闭</span><br>
+    <a href="javascript:stopHere();">留在本页面</a>
+</body>
+<script>
+    window.onload=function(){
+        setTimeout(count,1000);
+    }
+    var span = document.querySelector("span");
+    var num = 5;
+    var timer;
+    function count(){
+        num -= 1
+        span.innerHTML = num+"秒后自动关闭";
+        if(num>0){
+            timer = setTimeout(count, 1000);
+        }else{
+            window.close();
+        }      
+    }
+
+    function stopHere(){
+        clearTimeout(timer);
+        timer = null;
+    }
+</script>
+</html>

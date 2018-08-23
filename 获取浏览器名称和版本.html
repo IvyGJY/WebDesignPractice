@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>浏览器版本</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    
+</head>
+<body>
+    
+</body>
+<script>
+    var browser = "unknown";
+    var content = window.navigator.userAgent;
+    if(content.indexOf("MSIE")!=-1){
+        browser = "MSIE";
+    }else if(content.indexOf("Firefox")!=-1){
+        browser = "Firefox";
+    }else if(content.indexOf("OPR")!=-1){
+        browser = "Opera";
+    }else if(content.indexOf("Edge")!=-1){
+        browser = "Edge";
+    }    else if(content.indexOf("Chrome")!=-1){
+        browser = "Chrome";
+    }else if(content.indexOf("Safari")!=-1){
+        browser = "Safari";
+    }else if(content.indexOf("Trident")!=-1){
+        browser = "IE";
+    }
+    var version;
+    if(browser != "unknown"){
+        // 取3位版本号
+        // i+browser.length+1 是因为，浏览器版本信息一般为 e.g. Chrome/68.02.31
+        if(browser != "IE"){
+            var i = content.indexOf(browser);
+            version = parseInt(content.slice(i+browser.length+1, i+browser.length+1+3));
+        }else{
+            var i = content.indexOf("rv");
+            version = parseInt(content.slice(i+2+1, i+2+1+3));
+        }       
+        document.write("当前浏览器为"+browser+", 版本为："+version);
+    }else{
+        document.write("暂不支持您的浏览器");
+    }    
+</script>
+</html>

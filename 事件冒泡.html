@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html onclick="alert('我是<html>')">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>事件冒泡</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+       .d1{
+           width: 200px;
+           height: 200px;
+           background-color:rgb(122, 148, 219);
+       }
+       .d2{
+           width: 150px;
+           height: 150px;
+           background-color:  rgb(90, 206, 167);
+       }
+       .d3{
+           width: 100px;
+           height: 100px;
+           background-color: rgb(228, 218, 126);
+       }
+   </style>
+    
+</head>
+<body>
+    <div class="d1" onclick="fun(this)">
+        <div class="d2" onclick="fun(this)">
+            <div class="d3" onclick="fun(this)">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // 这种情况，要在 html 中的标签中写 onclick 事件，并同时传入this值
+    function fun(div){
+        div.style.backgroundColor = "red";
+        alert("您当前点击的是"+div.className);
+    }
+    // // 如果想要在捕获阶段触发onclick事件，可以用 addEventListener()，第三个参数，设置为true，就可以在捕获阶段触发了
+    // // 此时要把 html 中的 onclick 事件去掉
+    // function fun(){
+    //     this.style.backgroundColor = "red";
+    //     alert("您当前点击的是"+this.className);
+    // }
+    // window.onload=function(){
+    //     var divs = document.querySelectorAll("div");
+    //     for(var i = 0; i<divs.length; i++ ){
+    //         divs[i].addEventListener("click", fun, true); // 在捕获阶段触发click，设为 true
+    //     }
+    // }
+</script>
+</html>
