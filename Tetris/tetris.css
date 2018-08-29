@@ -1,0 +1,81 @@
+.wrapper{
+    line-height: 800px;
+    /* text-align: center; */
+}
+.container{
+    /* display: inline-block; */
+    overflow: hidden;
+    width: 500px;
+    height: 552px;
+    position: absolute;
+    left: 400px;
+    top: 20px;
+    border: 2px #9999CC solid;
+}
+.playPart{
+    float: left;
+    width: 270px;
+    height: 540px;
+    margin-top:5px;
+    margin-left:5px;  
+    margin-bottom:5px; 
+    line-height: 540px;
+    border: 1px #003366 solid;
+    position: absolute;
+}
+.infoPart{
+    float: right;
+    width: 210px;
+    height: 540px;
+    line-height: 540px;
+    margin: 5px 5px 5px 5px;
+    /* border: 1px #003366 solid; */
+}
+.display{
+    width: 208px;
+    height: 120px;
+    margin: 0;
+    line-height: 120px;
+    border: 1px #003366 solid;
+    /* position: relative; */
+}
+.score{
+    width: 198px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 20px;
+    border: 1px #003366 solid;
+    padding-left: 10px;
+    text-align: left;
+}
+.line{
+    width: 198px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -10px;
+    border: 1px #003366 solid;
+    padding-left: 10px;
+    text-align: left;
+}
+.level{
+    width: 198px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -10px;
+    border: 1px #003366 solid;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.tips{
+    width: 208px;
+    height: 210px;
+    margin-top: 20px;
+    line-height: 20px;
+    border: 1px #003366 solid;
+    text-align: center;
+}
+
+/* table{
+    width: 200px;
+} */

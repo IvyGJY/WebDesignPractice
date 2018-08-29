@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>俄罗斯方块</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="tetris.css" />
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="playPart"></div>
+            <div class="infoPart">
+                <div class="display"></div>
+                <p class="score">SCORE:0</p>
+                <p class="line">LINES:0</p>
+                <p class="level">LEVEL:1</p>
+                <table class="tips">
+                    <tr>
+                        <td>[P]</td>
+                        <td>暂停</td>
+                    </tr>
+                    <tr>
+                        <td>[C]</td>
+                        <td>继续</td>
+                    </tr>
+                    <tr>
+                        <td>[S]</td>
+                        <td>重新开始</td>
+                    </tr>
+                    <tr>
+                        <td>[Z]</td>
+                        <td>逆时针旋转</td>
+                    </tr>
+                    <tr>
+                        <td>[Up]</td>
+                        <td>顺时针旋转</td>
+                    </tr>
+                    <tr>
+                        <td>[Down]</td>
+                        <td>加速</td>
+                    </tr>
+                    <tr>
+                        <td>[Left]</td>
+                        <td>左移</td>
+                    </tr>
+                    <tr>
+                        <td>[Right]</td>
+                        <td>右移</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="shapes.js"></script>
+<script src="tetris.js"></script>
+</html>
