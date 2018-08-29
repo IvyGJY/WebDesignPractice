@@ -17,7 +17,7 @@ var tetris = {
 
     state : 1, // 保存游戏的当前状态
     state_running : 1, //游戏正在进行
-    state_over : 0,  //游戏结束
+    // state_over : 0,  //游戏结束
     state_pause : 2, //游戏暂停
 
     score : 0, //当前分数
