@@ -17,7 +17,7 @@ var tetris = {
 
     state : 1, // 保存游戏的当前状态
     state_running : 1, //游戏正在进行
-    // state_over : 0,  //游戏结束
+    state_over : 0,  //游戏结束
     state_pause : 2, //游戏暂停
 
     score : 0, //当前分数
@@ -26,11 +26,13 @@ var tetris = {
 
     init : function(){
         // 初始化 downCells 数组
+        downCells = [];
         for (var i=0; i<this.RowsNum; i++){
             this.downCells[i] = [];
         }
         this.score = 0;
         this.lines = 0;
+        this.state = 1;
 
         this.playPart = $(".playPart")[0];
         this.displayPart = $(".display")[0];
