@@ -1,3 +1,3 @@
 # WebDesignPractice
 Some practice about web design
-IvyGJY/WebDesignPractice/Tetris/tetris.html
+https://github.com/IvyGJY/WebDesignPractice/Tetris/tetris.html
