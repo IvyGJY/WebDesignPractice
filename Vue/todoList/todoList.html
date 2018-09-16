@@ -1,0 +1,34 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+</head>
+<body>
+    <div id="todoList">
+        <!-- v-on:submit.prevent 阻止事件发生，
+            正常的 submit 一次后，页面会被刷新，因此 ul中看不到结果 
+        于是，用 prevent 来阻止页面刷新，它相当于 e.preventDefault() -->
+        <form v-on:submit.prevent="addNew">
+            <label for="todo">Add a New one</label>
+            <input v-model="newText" id="todo">
+            <button>Add</button>
+        </form>
+        <ul>
+            <li is="todo-item"
+                v-for="(todo, index) in todoArray" 
+                v-bind:key="todo.id"
+                v-bind:title="todo.title"
+                v-on:remove="todoArray.splice(index, 1)"
+                >
+            </li>
+            
+        </ul>
+    </div>
+</body>
+<!-- 引用 Vue.js -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="todo.js"></script>
+</html>
