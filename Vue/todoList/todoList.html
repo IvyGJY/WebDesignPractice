@@ -21,7 +21,7 @@
                 v-for="(todo, index) in todoArray" 
                 v-bind:key="todo.id"
                 v-bind:title="todo.title"
-                v-on:remove="todoArray.splice(index, 1)"
+                v-on:remove="javascript:todoArray.splice(index, 1)"
                 >
             </li>
             

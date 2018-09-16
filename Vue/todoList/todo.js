@@ -25,9 +25,6 @@ var vm = new Vue({
     },
 
     methods:{
-        // removeIt:function(index){
-        //     todoArray.splice(index,1)
-        // },
         addNew:function(){
             this.todoArray.push({
                 id:this.nextIndex++,
